@@ -331,8 +331,8 @@ match args.platform:
         hdr = str(Path("out", args.platform, hdr_name + ".hdr"))
         ark = str(Path("out", args.platform, hdr_name + "_" + ark_part + ".ark"))
     case "wii":
-        hdr = str(Path("out", args.platform, "files", hdr_name + "_" + args.platform + ".hdr"))
-        ark = str(Path("out", args.platform, "files", hdr_name + "_" + args.platform + "_" + ark_part + ".ark"))
+        hdr = str(Path("out", args.platform, "files", hdr_name + ".hdr"))
+        ark = str(Path("out", args.platform, "files", hdr_name + "_" + ark_part + ".ark"))
     case "ps2":
         hdr = str(Path("out", args.platform, hdr_name + ".HDR"))
         ark = str(Path("out", args.platform, hdr_name + "_" + ark_part + ".ARK"))
