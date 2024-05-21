@@ -4,7 +4,13 @@
    {set $dx_mtv_holder {array ()}}
    {set $dx_state_tracker {array ()}}
 }
-
+#ifndef HX_WII
+;needs font on wii
+{set $dx_song_select_rings TRUE}
+{set $dx_diff_popups TRUE}
+#endif
+{set $dx_high_score_report TRUE}
+{set $dx_vsync TRUE}
 #ifdef _SHIP
 DX_LOG_CLEAR
 DX_JSON_CLEAR
@@ -13,6 +19,8 @@ DX_CURRENT_SONG_CLEAR
 {resize $dx_playlist_array 0}
 {write_file DX_PLAYLIST_DTA_PATH $dx_playlist_array}
 #endif
+{set $dx_play_a_show_active_instruments ()}
+{resize $dx_play_a_show_active_instruments 0}
 ;rb4 loosly
 {set $dx_track_config_changed FALSE}
 {set $dx_pitch -46.0}
