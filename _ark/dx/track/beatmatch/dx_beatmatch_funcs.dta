@@ -6,7 +6,7 @@
    ;   {sprintf "Executed dx_current_section_fetcher - time: %.4fms"
    ;      {time
             {if {&& $dx_mtvup $dx_section_mtv_line}
-               {set $dx_current_section {localize {beatmatch get_section_at_ms {{beatmatch main_performer} progress_ms}}}}
+               {set $dx_current_section {beatmatch get_section_at_ms {{beatmatch main_performer} progress_ms}}}
                {{{gamemode get track_panel} find mtv_overlay} mtv_formatter}
             }
    ;      }

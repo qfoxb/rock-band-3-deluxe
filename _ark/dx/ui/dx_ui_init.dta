@@ -166,12 +166,13 @@ DX_CURRENT_SONG_CLEAR
 #endif
 
 ;set mtv vars, trainer doesn't like these empty on boot
-{set $artistvar "No Artist Found"}
-{set $yearvar "No Year Found"}
-{set $albumvar "No Album Found"}
-{set $genrevar "No Genre Found"}
-{set $subgenrevar "No Sub Genre Found"}
-{set $sourcevar "No Source Found"}
+{if {! $artistvar} {set $artistvar dx_no_artist}}
+{if {! $yearvar} {set $yearvar dx_no_year}}
+{if {! $albumvar} {set $albumvar dx_no_album}}
+{if {! $genrevar} {set $genrevar dx_no_genre}}
+{if {! $subgenrevar} {set $subgenrevar dx_no_subgenre}}
+{if {! $sourcevar} {set $sourcevar dx_no_source}}
+{if {! $dx_song_key_var} {set $dx_song_key_var dx_no_song_key}}
 
 {set $dx_player_icons TRUE}
 
